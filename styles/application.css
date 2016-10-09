@@ -408,8 +408,12 @@ body {
 
 .cv {
   background-color: rgba(255, 255, 255, 0.9);
-  padding: 30px 30px;
-  margin-top: 40px; }
+  padding: 30px 30px 0 30px;
+  margin-top: 40px;
+  margin-bottom: 40px; }
+  @media screen and (max-width: 568px) {
+    .cv {
+      padding: 20px 20px; } }
 
 .cv__header {
   padding-bottom: 20px;
@@ -438,12 +442,24 @@ body {
     font-weight: 400;
     font-size: 100%;
     margin-bottom: 1.3em;
-    position: absolute;
-    bottom: 35px;
-    right: 0;
     margin-bottom: 0; }
     .cv__header p a {
       color: #f0535e; }
+    @media screen and (min-width: 1270px) {
+      .cv__header p {
+        position: absolute;
+        bottom: 35px;
+        right: 0; } }
+    @media screen and (min-width: 960px) and (max-width: 1269px) {
+      .cv__header p {
+        position: absolute;
+        bottom: 35px;
+        right: 0; } }
+    @media screen and (min-width: 569px) and (max-width: 959px) {
+      .cv__header p {
+        position: absolute;
+        bottom: 35px;
+        right: 0; } }
     .cv__header p a.social {
       color: #2d2d2d;
       display: block; }
@@ -498,10 +514,12 @@ body {
     .cv__container p:not(.lead) a {
       color: #f0535e; }
   .cv__container .time {
-    padding: 0 3px;
     display: inline-block;
-    background-color: #f2f4e7;
     color: #76c299; }
+    .cv__container .time em {
+      white-space: nowrap;
+      padding: 0 3px;
+      background-color: #f2f4e7; }
   .cv__container ul {
     font-family: 'Abhaya Libre', serif;
     font-weight: 400;
@@ -523,16 +541,22 @@ body {
       width: 7px;
       height: 7px;
       background-color: #76c299; }
+      @media screen and (max-width: 568px) {
+        .cv__container ul li:before {
+          top: 5px;
+          width: 5px;
+          height: 5px; } }
   .cv__container.projects {
     overflow: hidden; }
     .cv__container.projects h3 {
+      line-height: 1.4;
       margin-bottom: 14px; }
       .cv__container.projects h3 a {
         color: #2d2d2d;
         border-bottom: 2px solid #f0535e; }
     .cv__container.projects .cv__container-row {
       margin-bottom: 20px;
-      width: calc(50% - 40px);
+      width: calc(50% - 20px);
       float: left; }
       .cv__container.projects .cv__container-row:nth-of-type(2n+1) {
         clear: left;
@@ -541,7 +565,7 @@ body {
     overflow: hidden; }
     .cv__container.final .cv__container-row {
       margin-bottom: 20px;
-      width: calc(50% - 40px);
+      width: calc(50% - 20px);
       float: left; }
       .cv__container.final .cv__container-row:first-of-type {
         margin-right: 40px; }
