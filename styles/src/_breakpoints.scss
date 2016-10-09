@@ -1,0 +1,67 @@
+$small: 569px;
+$medium: 960px;
+$large: 1270px;
+
+@mixin breakpoint($points...) {
+  @if index($points, overlarge) {
+    @media screen and (min-width: $large)
+    { @content; }
+  }
+  @if index($points, large) {
+    @media screen and (min-width: $medium) and (max-width: $large - 1px)
+    { @content; }
+  }
+  @if index($points, medium) {
+    @media screen and (min-width: $small) and (max-width: $medium - 1px)
+    { @content; }
+  }
+  @if index($points, small) {
+    @media screen and (max-width: $small - 1px)
+    { @content; }
+  }
+}
+
+@mixin print {
+  @media print {
+    @content;
+  }
+}
+
+.constrained {
+  @include breakpoint(overlarge) {
+    width: 80%;
+  }
+  @include breakpoint(large, medium) {
+    width: 90%;
+  }
+  @include breakpoint(small) {
+    margin: 0 10px;
+  }
+  margin: 0 auto;
+  max-width: 1200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.group {
+  @include breakpoint(overlarge) {
+    width: 80%;
+  }
+  @include breakpoint(large, medium) {
+    width: 82%;
+  }
+  @include breakpoint(small) {
+    width: calc(100% - 20px);
+    margin: 0 10px;
+  }
+  margin: 0 auto;
+  max-width: 1200px;
+  overflow: visible;
+  position: relative;
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

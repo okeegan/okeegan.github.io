@@ -1,0 +1,63 @@
+.content {
+  overflow: hidden;
+
+  p.lead {
+    @include h2;
+    margin-top: 0 !important;
+
+    span {
+      position: absolute;
+      top: 0;
+      left: -5000px;
+    }
+  }
+
+  p:not(.lead), ul {
+    @include p;
+    list-style: none;
+  }
+
+  ul li {
+    position: relative;
+    padding-left: 1em;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: 0;
+      border-radius: 50%;
+      width: 5px;
+      height: 5px;
+      background-color: $green;
+    }
+  }
+}
+
+  .content__column {
+    @include breakpoint(overlarge, large, medium) {
+      float: left;
+      width: columns(22);
+    }
+
+    i {
+      margin-right: 5px;
+    }
+
+    &:first-of-type {
+      @include breakpoint(overlarge, large, medium) {
+        margin-right: columns(2);
+        width: columns(10);
+      }
+
+      p {
+        margin-bottom: 10px;
+
+        a span {
+          position: absolute;
+          top: 0;
+          left: -5000px;
+        }
+      }
+    }
+  }

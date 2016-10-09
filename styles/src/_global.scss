@@ -1,0 +1,29 @@
+html {
+  @include breakpoint(overlarge, large, medium) {
+    font-size: 30px;
+  }
+  @include breakpoint(small) {
+    font-size: 16px;
+  }
+}
+
+body {
+  background-color: mix($light_yellow, $white, 60%);
+  color: $black;
+  line-height: 1.45;
+}
+
+.nameplate {
+  @include breakpoint(medium) {
+    background: url("/images/oliviak-comp.svg") top left no-repeat;
+    background-size: 200px auto;
+    width: 200px;
+    height: 35px;
+    margin: 40px auto 60px;
+  }
+
+  a {
+    display: block;
+    text-indent: -5000px;
+  }
+}

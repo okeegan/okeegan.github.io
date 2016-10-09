@@ -1,0 +1,58 @@
+%h_margins {
+  margin: 1.414em 0 0.5em;
+  font-weight: inherit;
+  line-height: 1.2;
+}
+
+@mixin h1 {
+  @extend %h_margins;
+  @include ff_abril;
+  @include breakpoint(small) {
+    letter-spacing: 0.5px;
+  }
+  margin-top: 0;
+  font-size: 3.157em;
+}
+
+@mixin h2 {
+  @extend %h_margins;
+  @include ff_abril;
+  font-size: 2.369em;
+}
+
+@mixin h3 {
+  @extend %h_margins;
+  @include ff_abril;
+  font-size: 1.777em;
+}
+
+@mixin h4 {
+  @extend %h_margins;
+  @include ff_abril;
+  font-size: 1.333em;
+}
+
+@mixin p-lead {
+  @include ff_abhaya;
+  font-size: 1.15em;
+  margin-bottom: 1.3em;
+
+  a {
+    color: $red;
+  }
+}
+
+@mixin p {
+  @include ff_abhaya;
+  font-size: 100%;
+  margin-bottom: 1.3em;
+
+  a {
+    color: $red;
+  }
+}
+
+@mixin meta {
+  @include ff_abhaya;
+  font-size: 0.75em;
+}
