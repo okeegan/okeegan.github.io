@@ -1,9 +1,12 @@
 html {
-  @include breakpoint(overlarge, large, medium) {
+  @include breakpoint(overlarge, large) {
     font-size: 30px;
   }
+  @include breakpoint(medium) {
+    font-size: 24px;
+  }
   @include breakpoint(small) {
-    font-size: 16px;
+    font-size: 20px;
   }
 }
 
@@ -14,12 +17,24 @@ body {
 }
 
 .nameplate {
-  @include breakpoint(medium) {
-    background: url("/images/oliviak-comp.svg") top left no-repeat;
+  background: url("/images/oliviak-comp.svg") top left no-repeat;
+  @include breakpoint(overlarge, large) {
     background-size: 200px auto;
     width: 200px;
     height: 35px;
-    margin: 40px auto 60px;
+    margin: 40px auto 0 0;
+  }
+  @include breakpoint(medium) {
+    background-size: 200px auto;
+    width: 200px;
+    height: 35px;
+    margin: 40px auto 0 0;
+  }
+  @include breakpoint(small) {
+    background-size: 140px auto;
+    width: 140px;
+    height: 24px;
+    margin: 30px auto 0 0;
   }
 
   a {

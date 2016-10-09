@@ -1,0 +1,213 @@
+.cv {
+  background-color: rgba($white, 0.9);
+  padding: 30px 30px;
+  margin-top: 40px;
+}
+
+.cv__header {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  position: relative;
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    height: 4px;
+    left: 0;
+    width: 100%;
+    background-color: $green;
+  }
+
+  h2 {
+    @include h2;
+    margin-bottom: 6px;
+  }
+
+  h3 {
+    @include ff_abhaya;
+    font-size: 1.34em;
+    margin-bottom: 10px;
+  }
+
+  p {
+    @include p;
+    position: absolute;
+    bottom: 35px;
+    right: 0;
+    margin-bottom: 0;
+
+    a.social {
+      color: $black;
+      display: block;
+
+      i {
+        color: $red;
+        margin-right: 6px;
+      }
+    }
+  }
+}
+
+.cv__summary {
+  p.lead {
+    @include p-lead;
+    max-width: 37em;
+  }
+}
+
+.cv__container {
+  margin-top: 40px;
+
+  h2 {
+    @include h3;
+    margin-top: 0;
+    padding-bottom: 25px;
+    margin-bottom: 40px;
+    position: relative;
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      height: 4px;
+      left: 0;
+      width: 80px;
+      background-color: $green;
+    }
+  }
+
+  h3 {
+    @include h4-abhaya;
+    margin-bottom: 0;
+  }
+
+  h4 {
+    @include h5-abhaya;
+    margin-bottom: 0;
+  }
+
+  p:not(.lead) {
+    @include p;
+  }
+
+  .time {
+    padding: 0 3px;
+    display: inline-block;
+    background-color: $light_green;
+    color: $green;
+  }
+
+  ul {
+    @include p;
+    list-style: none;
+  }
+
+  ul li {
+    position: relative;
+    padding-left: 1em;
+
+    &:before {
+      content: "";
+      position: absolute;
+      line-height: inherit;
+      top: 8px;
+      left: 0;
+      border-radius: 50%;
+      width: 7px;
+      height: 7px;
+      background-color: $green;
+    }
+  }
+
+  &.projects {
+    overflow: hidden;
+
+    h3 {
+      margin-bottom: 14px;
+
+      a {
+        color: $black;
+        border-bottom: 2px solid $red;
+      }
+    }
+
+    .cv__container-row {
+      margin-bottom: 20px;
+      width: calc(50% - 40px);
+      float: left;
+
+      &:nth-of-type(2n+1) {
+        clear: left;
+        margin-right: 40px;
+      }
+    }
+  }
+
+  &.final {
+    overflow: hidden;
+
+    .cv__container-row {
+      margin-bottom: 20px;
+      width: calc(50% - 40px);
+      float: left;
+
+      &:first-of-type {
+        margin-right: 40px;
+      }
+    }
+  }
+}
+
+.education__item {
+  margin-bottom: 20px;
+
+  p {
+    margin-bottom: 0px !important;
+  }
+}
+
+.experience .cv__container-row {
+  border-bottom: 1px solid $very_light_grey;
+  padding-bottom: 25px;
+  margin-bottom: 30px;
+}
+
+.cv__container-row {
+  position: relative;
+
+  .job-title {
+    @include h4-abhaya;
+    margin-bottom: 2px;
+  }
+
+  .details {
+    p, ul {
+      @include p;
+      list-style: none;
+      max-width: 37em;
+    }
+  }
+}
+
+  .cv__container-row__details {
+    position: relative;
+    overflow: hidden;
+  }
+
+    .details__left {
+      float: left;
+      width: columns(25);
+
+      p {
+        color: $grey;
+        margin-bottom: 0;
+      }
+    }
+    .details__right {
+      float: left;
+      text-align: right;
+      width: columns(9);
+    }

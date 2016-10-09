@@ -1,63 +1,102 @@
 .content {
+  @include breakpoint(large, overlarge) {
+    max-width: 400px;
+  }
+  @include breakpoint(medium) {
+    max-width: 280px;
+  }
+  @include breakpoint(small) {
+    max-width: 240px;
+    margin-top: 20px;
+  }
+  min-width: 200px;
+  margin: 0 auto;
   overflow: hidden;
-
-  p.lead {
-    @include h2;
-    margin-top: 0 !important;
-
-    span {
-      position: absolute;
-      top: 0;
-      left: -5000px;
-    }
-  }
-
-  p:not(.lead), ul {
-    @include p;
-    list-style: none;
-  }
-
-  ul li {
-    position: relative;
-    padding-left: 1em;
-
-    &:before {
-      content: "";
-      position: absolute;
-      top: 4px;
-      left: 0;
-      border-radius: 50%;
-      width: 5px;
-      height: 5px;
-      background-color: $green;
-    }
-  }
+  position: relative;
 }
 
   .content__column {
-    @include breakpoint(overlarge, large, medium) {
-      float: left;
-      width: columns(22);
-    }
+    margin-top: 25px;
+    padding-top: 20px;
+    position: relative;
 
-    i {
-      margin-right: 5px;
-    }
+    h2 {
+      @include h2;
+      @include breakpoint(overlarge, large) {
+        padding-bottom: 30px;
+        margin-bottom: 30px;
 
-    &:first-of-type {
-      @include breakpoint(overlarge, large, medium) {
-        margin-right: columns(2);
-        width: columns(10);
+        &:after {
+          height: 4px;
+        }
+      }
+      @include breakpoint(medium) {
+        font-size: 1.9em;
+        padding-bottom: 25px;
+        margin-bottom: 25px;
+
+        &:after {
+          height: 3px;
+        }
+      }
+      @include breakpoint(small) {
+        font-size: 2.2em;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+
+        &:after {
+          height: 3px;
+        }
+      }
+      position: relative;
+      margin-top: 0 !important;
+
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40%;
+        background-color: $green;
       }
 
-      p {
-        margin-bottom: 10px;
+      span {
+        position: absolute;
+        top: 0;
+        left: -5000px;
+      }
+    }
 
-        a span {
-          position: absolute;
-          top: 0;
-          left: -5000px;
-        }
+    p, ul {
+      @include p;
+      text-align: justify;
+      list-style: none;
+    }
+
+    ul li {
+      position: relative;
+      padding-left: 1em;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 4px;
+        left: 0;
+        border-radius: 50%;
+        width: 5px;
+        height: 5px;
+        background-color: $green;
+      }
+    }
+
+    .social {
+      margin-right: 6px;
+
+      span {
+        position: absolute;
+        top: 0;
+        left: -5000px;
       }
     }
   }

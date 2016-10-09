@@ -1,5 +1,4 @@
 %h_margins {
-  margin: 1.414em 0 0.5em;
   font-weight: inherit;
   line-height: 1.2;
 }
@@ -30,6 +29,33 @@
   @extend %h_margins;
   @include ff_abril;
   font-size: 1.333em;
+}
+
+@mixin h5 {
+  @extend %h_margins;
+  @include ff_abhaya;
+  font-size: 1.33em;
+}
+
+@mixin h3-abhaya {
+  @extend %h_margins;
+  @include ff_abhaya;
+  font-weight: 800 !important;
+  font-size: 1.777em;
+}
+
+@mixin h4-abhaya {
+  @extend %h_margins;
+  @include ff_abhaya;
+  font-weight: 800 !important;
+  font-size: 1.333em;
+}
+
+@mixin h5-abhaya {
+  @extend %h_margins;
+  @include ff_abhaya;
+  font-weight: 800 !important;
+  font-size: 1em;
 }
 
 @mixin p-lead {
