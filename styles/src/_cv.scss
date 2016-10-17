@@ -39,7 +39,7 @@
     @include p;
     @include breakpoint(overlarge, large, medium) {
       position: absolute;
-      bottom: 35px;
+      bottom: 38px;
       right: 0;
     }
     margin-bottom: 0;
@@ -48,7 +48,13 @@
       color: $black;
       display: block;
 
+      em {
+        color: $red;
+        padding-right: 5px;
+      }
+
       i {
+        font-size: 10px;
         color: $red;
         margin-right: 6px;
       }
@@ -68,6 +74,7 @@
 
   h2 {
     @include h3;
+    letter-spacing:0.8px;
     margin-top: 0;
     padding-bottom: 25px;
     margin-bottom: 40px;
@@ -88,6 +95,12 @@
   h3 {
     @include h4-abhaya;
     margin-bottom: 0;
+
+    span {
+      font-size: 0.77em;
+      font-weight: 400 !important;
+      color: mix($grey, $white, 60%);
+    }
   }
 
   h4 {
@@ -128,7 +141,7 @@
       content: "";
       position: absolute;
       line-height: inherit;
-      top: 8px;
+      top: 6px;
       left: 0;
       border-radius: 50%;
       width: 7px;
@@ -150,6 +163,21 @@
       }
     }
 
+    p.meta {
+      position:relative;
+      padding-left: 15px;
+      color: $grey;
+      line-height: 15px;
+
+      i {
+        font-size: 10px;
+        position: absolute;
+        top: 3px;
+        left: 0;
+        color: $green;
+      }
+    }
+
     .cv__container-row {
       margin-bottom: 20px;
       width: calc(50% - 20px);
@@ -159,11 +187,20 @@
         clear: left;
         margin-right: 40px;
       }
+
+      &:nth-of-type(3),
+      &:nth-of-type(4) {
+        margin-bottom: 0;
+      }
     }
   }
 
   &.final {
     overflow: hidden;
+
+    h4 {
+      margin-bottom: 10px;
+    }
 
     .cv__container-row {
       margin-bottom: 20px;
@@ -189,6 +226,11 @@
   border-bottom: 1px solid $very_light_grey;
   padding-bottom: 25px;
   margin-bottom: 30px;
+
+  &:last-of-type {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
 }
 
 .cv__container-row {
