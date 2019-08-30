@@ -29,6 +29,22 @@
     position: relative;
 
     h2 {
+      @include h2;
+      position: relative;
+      margin-top: 0 !important;
+
+      span {
+        position: absolute;
+        top: 0;
+        left: -5000px;
+      }
+
+      a {
+        color: $green;
+      }
+    }
+
+    h3 {
       @include h3;
       @include breakpoint(overlarge, large) {
         padding-bottom: 30px;
@@ -56,8 +72,10 @@
           height: 3px;
         }
       }
-      position: relative;
       margin-top: 0 !important;
+      position: relative;
+      text-align: right;
+      width: 50%;
 
       &::first-letter {
         margin-left: -0.5em;
