@@ -455,61 +455,40 @@ body {
 }
 .content__column h3 {
   font-family: "Abril Fatface", cursive;
-  font-size: 1.777em;
-  margin-top: 0 !important;
+  font-size: 1.333em;
   position: relative;
   text-align: right;
-  width: 50%;
+  width: 100%;
 }
 @media screen and (min-width: 1270px) {
   .content__column h3 {
+    margin-top: 20px;
     padding-bottom: 30px;
     margin-bottom: 30px;
-  }
-  .content__column h3:after {
-    height: 4px;
   }
 }
 @media screen and (min-width: 960px) and (max-width: 1269px) {
   .content__column h3 {
+    margin-top: 20px;
     padding-bottom: 30px;
     margin-bottom: 30px;
-  }
-  .content__column h3:after {
-    height: 4px;
   }
 }
 @media screen and (min-width: 569px) and (max-width: 959px) {
   .content__column h3 {
     font-size: 1.9em;
+    margin-top: 20px;
     padding-bottom: 25px;
     margin-bottom: 25px;
-  }
-  .content__column h3:after {
-    height: 3px;
   }
 }
 @media screen and (max-width: 568px) {
   .content__column h3 {
     font-size: 2.2em;
+    margin-top: 20px;
     padding-bottom: 20px;
     margin-bottom: 20px;
   }
-  .content__column h3:after {
-    height: 3px;
-  }
-}
-.content__column h3::first-letter {
-  margin-left: -0.5em;
-}
-.content__column h3:after {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 20%;
-  background-color: #76c299;
 }
 .content__column h3 span {
   position: absolute;
