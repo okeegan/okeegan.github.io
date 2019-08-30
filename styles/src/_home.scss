@@ -8,10 +8,10 @@
 
 .content {
   @include breakpoint(large, overlarge) {
-    max-width: 400px;
+    max-width: 500px;
   }
   @include breakpoint(medium) {
-    max-width: 280px;
+    max-width: 380px;
   }
   @include breakpoint(small) {
     max-width: 240px;
@@ -29,7 +29,7 @@
     position: relative;
 
     h2 {
-      @include h2;
+      @include h3;
       @include breakpoint(overlarge, large) {
         padding-bottom: 30px;
         margin-bottom: 30px;
@@ -77,6 +77,10 @@
         position: absolute;
         top: 0;
         left: -5000px;
+      }
+
+      a {
+        color: $green;
       }
     }
 
