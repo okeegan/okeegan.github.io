@@ -326,7 +326,7 @@ h1, h2, h3, h4, h5, h6, i, em, cite, dfn {
   content: "";
 }
 
-.cv__container-row .job-title, .cv__container h4, .cv__container h3, .cv__container h2, .cv__header h2, .content__column h3, .content__column h2 {
+.cv__container-row .job-title, .cv__container h4, .cv__container h3, .cv__container h2, .cv__header h2, .content__column h4, .content__column h3, .content__column h2 {
   font-weight: inherit;
   line-height: 1.2;
 }
@@ -496,6 +496,47 @@ body {
   left: -5000px;
 }
 .content__column h3 a {
+  color: #76c299;
+}
+.content__column h4 {
+  font-family: "Abhaya Libre", serif;
+  font-weight: 400;
+  font-size: 1.33em;
+  position: relative;
+  text-align: right;
+  width: 100%;
+}
+@media screen and (min-width: 1270px) {
+  .content__column h4 {
+    margin-top: 20px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 960px) and (max-width: 1269px) {
+  .content__column h4 {
+    margin-top: 20px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 569px) and (max-width: 959px) {
+  .content__column h4 {
+    font-size: 1.9em;
+    margin-top: 20px;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+  }
+}
+@media screen and (max-width: 568px) {
+  .content__column h4 {
+    font-size: 2.2em;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+}
+.content__column h4 a {
   color: #76c299;
 }
 .content__column p, .content__column ul {
