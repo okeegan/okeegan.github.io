@@ -82,23 +82,21 @@
       @include h5;
       @include breakpoint(overlarge, large) {
         margin-top: 20px;
-        padding-bottom: 30px;
-        margin-bottom: 30px;
+        margin-bottom: 15px;
       }
       @include breakpoint(medium) {
-        font-size: 1.9em;
+        font-size: 1.5em;
         margin-top: 20px;
-        padding-bottom: 25px;
-        margin-bottom: 25px;
+        margin-bottom: 15px;
       }
       @include breakpoint(small) {
-        font-size: 2.2em;
+        font-size: 2.0em;
         margin-top: 20px;
-        padding-bottom: 20px;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
       }
+      color: $light_blue;
+      font-weight: bold;
       position: relative;
-      text-align: right;
       width: 100%;
 
       a {
